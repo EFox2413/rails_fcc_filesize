@@ -36,9 +36,9 @@ Rails.application.routes.draw do
   
   #fcc backend file size shower
   # =>submit a file form view
-  #get 'filesize', to: 'filesize#create'
+  get 'filesize', to: 'filesize#index'
   # =>show filesize of submitted file
-  #get 'filesize/show', to: 'filesize#show'
+  post 'filesize/show', to: 'filesize#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

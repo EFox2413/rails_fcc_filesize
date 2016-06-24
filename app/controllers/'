@@ -1,0 +1,14 @@
+class FilesizeController < ApplicationController
+    def index
+        @upload = Filestore.new
+    end
+
+    def show
+        uploaded_io = params[:fileUpload]
+
+        p 'LOOK AT ME LOOK AT ME LOOK AT ME'
+        p uploaded_io
+        size = number_to_human_size(File.size("#{uploaded_io}"))
+        render json: {filesize: '0'}
+    end
+end
