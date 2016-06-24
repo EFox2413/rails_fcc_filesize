@@ -1,6 +1,5 @@
 class FilesizeController < ApplicationController
     def index
-        @upload = Filestore.new
     end
 
     def show
